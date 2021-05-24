@@ -1,9 +1,14 @@
+/******* Autumn: Theme for SiYuan Note ************
+1. 本主题样式仅在16px字号设置下进行有限场景的测试，不能保证所有页面均完美呈现。如果遇到相关功能或样式问题，请重置为官方主题后再确认问题是否重现。
+2. 标注为「实验功能」的部分请谨慎开启使用。
+/************************/
+
 :root {
-    
+     /* 主色 */
     --b3-theme-primary: #A47327;/* 主色 */
     --b3-theme-primary-light: rgba(164, 115, 39, 0.54); /* 半透明色，用于输入框边框阴影等 */
-    --b3-theme-primary-lighter: rgba(164, 115, 39, 0.38);
-    --b3-theme-primary-lightest: rgba(164, 115, 39, 0.12);
+    --b3-theme-primary-lighter: rgba(164, 115, 39, 0.3);
+    --b3-theme-primary-lightest: rgba(164, 115, 39, 0.1);
     --b3-theme-secondary: #f3a92f;
     --b3-theme-background: #F6F1E0; /* 编辑区背景 */
     --b3-theme-surface: #EDE7CF; /* 弹出面板 */
@@ -16,22 +21,24 @@
     --b3-theme-on-surface: #5f6368;
     --b3-theme-on-error: #FFFFFF;
 
+
     /* 字体 */
-    --b3-font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family:  "Pingfang SC","Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
     --b3-font-family-code: mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-graph: mononoki;
 
     /* 线条 */
     --b3-border-color: rgba(0, 0, 0, .05);
 
     /* 滚动条 */
-    --b3-scroll-color: rgba(0, 0, 0, .1);
+    --b3-scroll-color: rgba(0, 0, 0, .2);
 
     /* 列表 */
-    --b3-list-hover: rgba(0, 0, 0, .06);
+    --b3-list-hover: rgba(0, 0, 0, .05);
 
     /* 页签 */
-    --b3-tab-background: #FFFFFF;
-    --b3-tab-background-hover: #EEDEC2;
+    --b3-tab-background: #f8f9fa;
+    --b3-tab-background-hover: var(--b3-theme-primary-lightest);
 
     /* 提示 */
     --b3-tooltips-color: rgba(0, 0, 0, 0.54);
@@ -46,11 +53,39 @@
     --b3-card-success-color: rgb(30, 70, 32);
     --b3-card-success-background: rgb(237, 247, 237);
 
+    /* 自定义文字 */
+    --b3-font-color1: var(--b3-card-error-color);
+    --b3-font-color2: var(--b3-card-warning-color);
+    --b3-font-color3: var(--b3-card-info-color);
+    --b3-font-color4: var(--b3-card-success-color);
+    --b3-font-color5: var(--b3-theme-on-surface);
+    --b3-font-color6: var(--b3-theme-primary);
+    --b3-font-color7: var(--b3-theme-secondary);
+    --b3-font-color8: var(--b3-theme-error);
+    --b3-font-color9: #f5539e;
+    --b3-font-color10: #944194;
+    --b3-font-color11: #65b84d;
+    --b3-font-color12: #f5822e;
+    --b3-font-color13: var(--b3-theme-background);
+    --b3-font-background1: var(--b3-card-error-background);
+    --b3-font-background2: var(--b3-card-warning-background);
+    --b3-font-background3: var(--b3-card-info-background);
+    --b3-font-background4: var(--b3-card-success-background);
+    --b3-font-background5: var(--b3-theme-surface);
+    --b3-font-background6: var(--b3-theme-primary-light);
+    --b3-font-background7: rgba(217, 211, 215, 0.5);
+    --b3-font-background8: rgba(255, 193, 153, 0.5);
+    --b3-font-background9: rgba(189, 201, 255, 0.5);
+    --b3-font-background10: rgba(239, 218, 251, 0.5);
+    --b3-font-background11: rgba(234, 202, 220, 0.5);
+    --b3-font-background12: rgba(253, 198, 200, 0.5);
+    --b3-font-background13: var(--b3-theme-on-background);
+
     /* 动画效果 */
     --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
 
     /* 阴影 */
-    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 
     /* diff */
@@ -82,403 +117,696 @@
     --b3-graph-hl-point: #f3a92f;
     --b3-graph-hl-line: #4285f4;
 
-    /* 编辑器工具栏高度 */
-    --b3-vditor-toolbar-height: 29px;
-    --b3-vditor-toolbar-height-space: 6px;
-
     /* 编辑器搜索颜色 */
-    --b3-vditor-search-background: #ffe955;
-    --b3-vditor-search-border-color: #f2e680;
-    --b3-vditor-search-current-background: #40C14A; /** 当前匹配的搜索结果 */
+    --b3-protyle-search-background: #ffe955;
+    --b3-protyle-search-border-color: #f2e680;
+    --b3-protyle-search-current-background: #a5d3fe;
 
     /* 代码片段背景 */
-    --b3-vditor-code-background: #EEDEC2;
+    --b3-protyle-code-background: rgba(27, 31, 35, .05);
 
-    /* 即时渲染标记符颜色 */
-    --b3-vditor-mark-heading-color: #945932;
-    --b3-vditor-mark-title-color: #808080;
-    --b3-vditor-mark-em-color: #329493;
-    --b3-vditor-mark-strong-color: #945932;
-    --b3-vditor-mark-backslash-color: #945932;
-    --b3-vditor-mark-s-color: #5f6368;
-    --b3-vditor-mark-mark-color: #5f6368;
-    --b3-vditor-mark-link-color: #008000;
-    --b3-vditor-mark-bracket-color: #945932;
-    --b3-vditor-mark-paren-color: #008000;
-    --b3-vditor-mark-block-color: #945932;
-    --b3-vditor-mark-tag-color: #945932;
+    /* 所见即所得行内元素颜色 */
+    --b3-protyle-inline-strong-color: var(--b3-theme-on-background); /* 粗体 */
+    --b3-protyle-inline-em-color:  var(--b3-theme-on-background); /* 斜体 */
+    --b3-protyle-inline-s-color: var(--b3-theme-on-background); /* 删除线 */
+    --b3-protyle-inline-link-color: var(--b3-theme-primary); /* 超级链接 */
+    --b3-protyle-inline-mark-background: #ffe68d; /* 高亮背景 */
+    --b3-protyle-inline-mark-color: var(--b3-theme-on-background); /* 高亮文本 */
+    --b3-protyle-inline-tag-color: #5f6368; /* 标签 */
+    --b3-protyle-inline-blockref-color: var(--b3-theme-primary); /* 双向链接文本 */
 
-    /* 即时渲染行内元素颜色 */
-    --b3-vditor-inline-strong-color: var(--b3-theme-primary); /* 加粗颜色 */
-    --b3-vditor-inline-em-color: #202124;
-    --b3-vditor-inline-s-color: #202124;
-    --b3-vditor-inline-link-color: #4285f4;
-    --b3-vditor-inline-mark-background: #C98010;/* 搜索结果高亮背景色 */
-    --b3-vditor-inline-mark-color: #FFFFFF; /* 搜索结果高亮字体色 */
-    --b3-vditor-inline-tag-color: #5f6368;
-    --b3-vditor-inline-blockref-color: #106BA3;
+/************* added by allen **********************************************************/
 
+    --allen-column-width:1px; /* 边框宽度 */
+    --allen-column-border:var(--allen-column-width) solid var(--b3-border-color); /* 分栏边框 */
+    --allen-protyle-inline-code:#558eda;
+    --allen-protyle-inline-code-background:rgba(208, 187, 193, 0.2);
+    --allen-line-height: 1.75em; /* 行高 */
 
-
-}
-
-/* 编辑器标题段落 */
-.vditor-reset h1{
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-.vditor-reset h2{
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-.vditor-reset h3{
-    margin-top: 1em;
-}
-.vditor-reset h4{
-    margin-top: 0.5em;
-}
-.vditor-reset h5{
-    margin-top: 0.5em;
-}
-.vditor-reset h6{
-    margin-top: 0.5em;
-}
-.vditor-reset p{
-    line-height: 170%;
-}
-.vditor-reset ul p, .vditor-reset ol p{
-    margin: 0;
-    padding-top: 0;
+    /*动画*/
+    --allen-page-scrollbar-transition: opacity 800ms ease 0s; /*分页加载条动画*/
+    --allen-flex-column-transition: width 200ms cubic-bezier(0, 0.7, 0.4, 1); /*侧边栏动画*/
+    --allen-common-transition: all 400ms ease 0s;/*通用动画*/
 }
 
 
-/* ########### 页面布局 ################################## */
 
-/* 顶栏 */
+/********** 一、框架&控件 *******************************************************/
+
+/******* 顶部工具栏 toolbar **********/
 .toolbar{
-     background-color: var(--b3-theme-surface);
-
-     box-shadow: 0px 2px 5px rgba(236,229,229,0.5);
-     border-bottom: 1px solid rgba(236,229,229,0.5);
-}
-
-/* dock */
-.dock{
     background-color: var(--b3-theme-surface);
+    border-bottom: var(--allen-column-border);
 }
-/* 左侧dock */
+
+
+/* 说明：支持在全屏模式下自动隐藏顶栏，鼠标悬浮时展现。请将 min-height和 min-width 设置为自己电脑屏幕分辨率，如果不需要此功能请注释代码 */
+/******* 隐藏toolbar 代码开始 *********/
+@media only screen and (min-height: 800px) and (min-width: 1000px)
+{
+    .toolbar{
+        height: 8px;
+        transition: height 400ms ease 0s;
+    }
+    .toolbar > div{
+        visibility: hidden;
+    }
+    .toolbar:hover{
+        height: 30px;
+        transition: height 400ms ease 0s;
+    }
+    .toolbar:hover >div{
+        visibility: visible;
+    }
+}
+/******* 隐藏toolbar 代码结束 *********/
+
+
+/******* dock  **********/
+/* 左侧 dock */
 #dockLeft{
-    align-items: center; 
-}
-/* 右侧dock */
-#dockRight{
-    /* background-color: var(--b3-theme-surface); */
-}
-
-/* 面板column */
-.fn__flex-column{
     background-color: var(--b3-theme-surface);
+    border-right:var(--allen-column-border);
 }
 
-/* dock 面板标题栏 */
+/* 右侧 dock */
+#dockRight{
+    background-color: var(--b3-theme-surface);
+    border-left: var(--allen-column-border);
+}
+
+/******** 边栏 column **********/
+/* 侧边栏收起动画 */
+#layouts > .fn__flex-1 > .fn__flex-column{
+    transition: var(--allen-flex-column-transition);
+}
+/*  边栏分割线 */
+.layout__resize--lr:after{
+    background-color: var(--b3-theme-surface);
+    transition: var(--allen-common-transition);
+}
+
+/* 边栏标题栏 */
 .block__icons{
     background-color: var(--b3-theme-surface);
 }
-
-/* dock 面板标题栏选中激活 */
-.block__icons--active{
-    background-color: var(--b3-theme-surface);
+/* 边栏列表项 */
+.b3-list-item__text{
+    color: var(--b3-theme-on-surface);
 }
-
-/* 面板列表项 选中状态*/
-.b3-list--background .b3-list-item--focus {
-    color: var(--b3-theme-primary);    
-    background-color: var(--b3-theme-surface) !important;
-}
-.b3-list-item--focus .b3-list-item__text{
+/* 边栏列表项图标 */
+.b3-list-item li svg{
     color: var(--b3-theme-primary);
 }
-
-/* dock列表项 hover状态 */
-.b3-list-item:hover{
-    background-color: var(--b3-theme-surface) !important;
-    color: var(--b3-theme-primary) !important;
+.b3-list-item__graphic{
+    #color: #666666;
 }
-.b3-list-item:hover .b3-list-item__text{
-    background-color: var(--b3-theme-surface) !important;
-    color: var(--b3-theme-primary) !important;
+.b3-list--background .b3-list-item--focus{
+    #background-color: var(--b3-theme-primary-lightest) !important;
 }
 
-/** block引文面板标题 */
-.block__logo{
-  font-weight: bold;
-
+/*区分文件数与引用数的图标样式*/
+span.counter:not(.popover__block){
+    border-radius:  50px;
+}
+.protyle-attr--refcount{
+    border-radius: 2px;
 }
 
 
-/* 页签标题栏 */
-.layout-tab-bar{
-    border-bottom: 1px solid var(--b3-border-color);
+
+/********* 菜单、弹框 **************/
+/* 通用 */
+.b3-menu, .protyle-util{
     background-color: var(--b3-theme-background);
 }
+/* 右键菜单 */
+.b3-menu{
+    padding: 10px 0px;
+}
+/* 菜单项 */
+.b3-menu__item{
+    padding: 4px 16px 4px 16px;
+    background-color: var(--b3-theme-background);
+}
+/* 菜单分割线 */
+.b3-menu__separator{
+    height: 1px;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+/* 菜单项选中状态 */
+.b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom), .b3-menu__item--current{
+    border-radius: 0px;
+    background-color: var(--b3-theme-surface);
+    
+}
+
+.b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom)>.b3-menu__label, .b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom)>.b3-menu__accelerator, .b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom)>.b3-menu__icon, .b3-menu__item--current>.b3-menu__label, .b3-menu__item--current>.b3-menu__accelerator, .b3-menu__item--current>.b3-menu__icon{
+    color: var(--b3-theme-on-background);
+}
+
+/* 弹出设置框，如超级链接设置 */
+.protyle-util{
+    padding: 10px;
+}
+
+
+/******** 文档编辑区 **********/
+
+/*** 页签栏 ****/
+.layout-tab-bar{
+    background-color: var(--b3-theme-background);
+    border-bottom: var(--allen-column-border);
+}
+/*清除页签栏边框对侧边栏的影响*/
 .layout-tab-bar:empty{
     border-bottom: none;
 }
-/* 页签标题栏 选中状态 */
-.layout-tab-bar .item--focus {
-    background-color: var(--b3-theme-background);
+/* 页签选中状态 */
+.layout-tab-bar .item--focus{
+    background-color: transparent;
 }
-/* 页签标题栏 未编辑状态 */
-.layout-tab-bar .item--unupdate {
-    font-style: italic;
-    color: var(--b3-theme-on-surface);
-}
-/* 页签标题栏 标题文字 */
+/* 页签标题 */
 .layout-tab-bar .item__text{
-    padding: 0 2px; /* 适当增加标题文本左右间隙 */
-}
-
-
-/* 反向链接面板 */
-.backlinkList,.backlinkMList{
-    background-color: var(--b3-theme-surface);
-} 
-.backlinkList mark{
-    color: var(--b3-theme-primary);
-    background-color: var(--b3-theme-surface);
-}
-/* ########### 通用设置 & 部件 ################################## */
-
-/* 通用文本输入框背景和字体色 */
-.b3-text-filed,.b3-select{
-   
-}
-/* 通用文本输入框文本选中状态 */
-.b3-text-filed::selection{
-    background-color: var(--b3-theme-primary);
-    color: white;
-}
-/* 对话框 */
-.b3-dialog__container{
-   #overflow: hidden; /* 开启可去除对话框关闭按钮 */
-}
-.b3-dialog__container .fn__flex-column{
-    border-radius: 8px;
-    overflow: hidden;
-}
-/** 列表样式 仿大纲笔记软件，多层嵌套时外层添加左边线 **/
-.vditor-ir ul ol, .vditor-ir ul ul {
-    margin-left: -0.96em !important;
-    padding-left: 2.8em !important;
-    margin-bottom: 12px;
-    border-left: 1px solid var(--b3-border-color);
-}
-
-
-
-/* switch开关控件 */
-.b3-switch:checked{
-    background-color: var(--b3-border-color);
-}
-
-/* 左侧边栏搜索 如果想设置左右侧面板不同样式可以设置.fn__flex-shrink */
-.fn__flex-shrink .search__label input{
-    /* background-color: var(--b3-theme-surface); */
-}
-/* 通用浮窗搜索 */
-.search__label input{
-    background-color: var(--b3-theme-surface);
-}
-/* 调整ember块分隔线颜色 */
-[data-type=block-render] .fn__flex-column{
-    /* background-color: #efefef; */
-}
-
-/* ########### 主编辑区 ################################## */
-
-/* 编辑器工具栏 */
-.vditor-toolbar{
-    background-color: var(--b3-theme-background);
-}
-
-.vditor-reset {
-    font-variant-ligatures: no-common-ligatures;
-    font-family: var(--b3-font-family);
-    word-wrap: break-word;
-    overflow: auto;
-    line-height: 1.6;
-    font-size: 16px;
-    word-break: break-word;
-}
-/* 块命名、别名 */
-.vditor-ir--tip *[tip] {
-    padding: 4px;    
-}
-.vditor-ir--tip *[tip]:not([fold="1"]):before{
-    margin: -12px 8px 0 0;
-}
-
-/* 设置编辑器光标颜色 */
-.vditor-ir{
-     caret-color:var(--b3-theme-primary);
-}
-/* 光标选中文本 */
-.vditor-ir ::selection{ 
-    background-color:var(--b3-theme-primary);
-    color: var(--b3-theme-on-primary);
-}
-
-/* 换行符 <br> */
-.vditor-ir__br{
-    color: #CCCCCC;
-}
-
-/* code  行内代码 */
-code{
-    color: var(--b3-theme-primary);
-    font-weight: bold;
-    background-color: var(--b3-vditor-code-background)!important;
-}
-
-/* 代码编辑区显示时不显示 bug：echarts图表无法实时更新，谨慎使用 */
-.vditor-ir__node--expand:not([data-type="inline-math"]) .vditor-ir__preview {
-    #display: none;
-}
-
-/* 数学公式 */
-.vditor-reset .language-math{
-    font-size: 95%;
-}
-
-/* tag 标签 */
-.vditor-ir__tag{
-    color: #8D8C8C;
-    text-decoration: none;
-    border-bottom: 1px solid #cdcdcd;
-}
-
-/* 外部链接 */
-.vditor-ir__link{
-    color: var(--b3-theme-primary);
-    text-decoration:none;
     padding: 0 2px;
 }
-.vditor-ir__link:hover{
-    cursor: pointer;
-}
 
-/* 块引用 */
-.vditor-ir__blockref{
-    border-bottom: .5px dashed var(--b3-theme-primary);
-    padding-bottom: 2px;
+/***** 面包屑 *****/
+.protyle-breadcrumb{
+    background-color: var(--b3-theme-background);
+    background-color: transparent;
+    border-bottom: 0px solid var(--b3-border-color);
+    padding: 6px 8px;
+}
+.protyle-breadcrumb .fn__flex{
+    background-color: var(--b3-theme-surface);
+    padding: 4px 8px;
+    border-radius: 150px;
+    border:0px solid var(--b3-theme-primary-lightest);
+    #box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+.protyle-breadcrumb .fn__flex:hover{
+    #background-color: var(--b3-theme-background);
+}
+.protyle-breadcrumb__item svg{
+    color: var(--b3-theme-on-surface);
+}
+.protyle-breadcrumb__item:hover svg,.protyle-breadcrumb__item:hover{
     color: var(--b3-theme-primary);
-    margin: 0 2px;
-
 }
-/* 块引用悬浮样式 */
- .vditor-ir__blockref:hover{
+.protyle-breadcrumb svg{
+    #color: var(--b3-scroll-color);
+}
+
+/**** 分页加载条：默认隐藏，悬浮展现 *******/
+.protyle-scroll{
+    opacity: 0;
+    transition: var(--allen-page-scrollbar-transition);
+}
+.protyle-scroll:hover{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* 设置编辑器光标颜色 */
+.protyle-wysiwyg{
+     caret-color:var(--b3-theme-primary);
+}
+
+/* 光标选中文本样式 */
+.protyle-wysiwyg ::selection{ 
+    background-color:var(--b3-theme-primary-lightest);
+    #color: var(--b3-theme-on-primary);
+}
+
+/* 实验功能：鼠标划选区域*/
+.protyle-select{
+    background-color: transparent;
+}
+
+/* 图片大小调整手柄 */
+.protyle-wysiwyg [data-node-id] .img .protyle-action__drag{
+    width: 6px;
+}
+.protyle-wysiwyg img:hover{
+    border:0px solid var(--b3-border-color);
+}
+
+/* 浮出工具条 */
+.protyle-toolbar{
+    border-radius: 3px;
+    padding: 1px 8px;
+}
+
+
+/***** 块图标 ********/
+/* 减淡块图标颜色 */
+.protyle-gutters svg {
+    color: var(--b3-scroll-color);
+}
+/* 增加块图标悬浮时背景色 */
+.protyle-gutters button:hover svg{
+    color: var(--b3-theme-primary);
+}
+.protyle-gutters button{
+    padding-top: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: var(--b3-theme-background); /* 强制块图标使用背景色，以避免在超级块等场景下显示不清楚 */
+}
+.protyle-gutters:hover button {
     background-color: var(--b3-theme-primary-lightest);
+    background-color: #ECE4D1; /* 采用非透明色，避免在超级块等场景下显示不清楚 */
+}
+
+/* 块引用数 */
+.protyle-attr--refcount{
+    position: relative;
+    left: 12px;
+    top:18px;
+}
+
+/* 块属性（别名、命名、备注） */
+.protyle-attr{
+    top: -9px;
 }
 
 
-
-/* blockquote 引言 */
-.vditor-reset blockquote {
-    padding: 0.5em;
-    color: #727172;
-    border-left: 0.25em solid var(--b3-theme-primary);
-    margin: 0 0 16px 0;
-    background-color: #EEDEC2;
+/***** 大纲圆点 *******/
+/* 设置圆点基础样式 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action svg{
+    width:12px;
+    height:12px;
+    margin:9px 0px 0px 1px;
+    color: var(--b3-tooltips-color);
+    border: 2px solid transparent;
 }
 
-/* 任务列表样式  enlightened by @zqhjl */
-.vditor-task input[type="checkbox"]:before {
-  content: "";
-  display: inline-block;
-  cursor: pointer;
-  width: 1.1rem;
-  height: 1.1rem;
-  vertical-align: middle;
-  text-align: center;
-  border: 0px;
-  border-radius: 3px;
-  background-color: var(--b3-vditor-code-background);
-  margin-top: -0.3rem;
-  margin-left: -0.2rem;
-  
+/* 圆点悬浮时样式 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover svg{
+    border-radius: 20px;
+    background-color: var(--b3-list-hover);
+    transition: all .2s ease-in-out;
+    transform: scale(1.22);
 }
 
-/* 任务列表未选中，鼠标悬停 */
-.vditor-task input[type="checkbox"]:not([disabled]):not(:checked):hover:before {
-  content: "\2713";
-  font-size: 0.9rem;
-  line-height: 1rem;
-  color: hsl(192, 6%, 40%);
-  color: var(--b3-theme-primary);
-  font-weight: bold;
+/* 圆点点击时样式 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:active svg{
+    border-radius: 20px;
+    background-color: var(--b3-theme-primary-lightest);
+    color: var(--b3-theme-primary);
 }
 
-/* 任务列表选中 */
-.vditor-task input[type="checkbox"]:checked:before {
-  content: "\2713";
-  font-size: 0.9rem;
-  line-height: 1rem;
-  color: var(--b3-theme-primary);
-  font-weight: bold;
+/* 消除圆点边框对待办事项的影响 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover svg{
+    border: 2px solid var(--b3-theme-background) !important;
+    border-radius: 0;
 }
 
-/* 任务列表选中，鼠标悬停 */
-.vditor-task input[type="checkbox"]:checked:hover:before {
-  content: "\2713";
-  font-size: 0.9rem;
-  line-height: 1rem;
-  color: #666;
-  font-weight: bold;
+/***** 反链面板 *********/
+/* 反链高亮颜色 */
+.backlinkList .b3-list-item__text mark{
+    background-color: transparent;
+    color:var(--b3-theme-primary);
 }
 
-/* 任务列表选中后的文本样式 */
-.vditor-task--done p {
-  color: #999;
-  text-decoration: line-through;
-}
-
-/* 任务列表与文字的距离 */
-.vditor-task input[type="checkbox"] {
-  margin-right: 0.5em;
-}
-
-/* 删除线样式 */
-.vditor-reset s{
-  color: #999;
-}
-
-
-/* 引用数icon */
-.vditor-ir__menu span{
-    background-color: var(--b3-theme-primary);
-    border-radius: 2px;
-    padding:0 2px;
-}
-/* 修改搜索结果页文件icon颜色使其更显目 #todo */
-.b3-dialog__container .b3-list-item__graphic use #iconFile{
- 
-} 
-
-
-/* 表格 */
-.vditor-reset table tr{
+/* 面板搜索图标 */
+.search__label .b3-form__icon-input{
     background-color: var(--b3-theme-surface);
 }
 
-/* 专家模式，列表字体颜色 */
-.cm-variable-2{
-    color: var(--b3-theme-on-background) !important;
+/* 弱化面板列表中的块类型图标 */
+.b3-list li[data-node-id] svg{
+    color: var(--b3-theme-on-surface);
 }
 
-.language-graphviz .graph > polygon {
+
+/********文档预览模式 ********/
+/*预览工具栏*/
+.protyle-preview__action{
+     background-color: var(--b3-theme-background);
+}
+.protyle-preview__action button{
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 100px;
+}
+
+
+/******************** 二、编辑器文档样式 ****************************************/
+
+strong[style]{
+    color: var(--b3-theme-on-background);
+}
+
+/* 下划线 */
+.protyle-wysiwyg u, .b3-typography u{
+    text-decoration: none;
+    border-bottom: 1px solid var(--b3-theme-on-background);
+}
+
+
+/* 块引用、双向链接 */
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]{
+     border-bottom: 1px dashed var(--b3-theme-primary);
+     #background-color: var(--b3-theme-primary-lightest);
+     padding: 2px ;
+     margin: 0px;
+}
+.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]:hover{
+    background-color: var(--b3-theme-primary-lighter);
+}
+
+
+/* 超级链接 */
+.b3-typography a,.protyle-wysiwyg [data-node-id] span[data-type="a"]{
+    padding: 0 1px;
+    border-bottom: 0px solid var(--b3-protyle-inline-link-color);
+}
+
+/* 行内代码块 */
+.b3-typography code:not(.hljs), .protyle-wysiwyg code:not(.hljs) {
+     margin:  0 1px;
+     color: var(--b3-theme-primary);
+     #background-color: var(--allen-protyle-inline-code-background);
+     font-size: 90%;
+     line-height: 100%;
+}
+
+/* kbd */
+.b3-typography kbd, .protyle-wysiwyg kbd{
+    font-size: 85%;
+}
+
+/* 引述 */
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    border-left: 2px solid var(--b3-theme-primary);
+    background-color: var(--b3-theme-background);
+    color: var(--b3-theme-on-surface);
+    margin:1em 2em 1em 2em !important; 
+    padding-left: 1em !important;
+    padding: 0 4px;
+}
+/* 调整引述在超级块中的样式 */
+.protyle-wysiwyg .sb blockquote,  .protyle-wysiwyg .sb .bq{
+    border-left: 3px solid var(--b3-border-color);
+    margin: 0 !important;
+    padding: 4px !important;
+}
+
+/* 代码片段 */
+.render-node[data-subtype="graphviz"] .graph > polygon {
     fill: transparent;
 }
-/*滚动条整体样式*/
+
+/* 待办事项 */
+.protyle-task--done{
+    color: var(--b3-scroll-color);
+    text-decoration: line-through;
+}
+.protyle-task--done svg{
+    color: var(--b3-scroll-color) !important;
+}
+.b3-typography .protyle-task p{
+    display: inline;
+}
+
+
+
+/* 块折叠状态 */
+.protyle-wysiwyg [data-node-id][fold="1"]{
+     height: 28px;
+}
+/* 调整折叠时 引述块样式 */
+.protyle-wysiwyg [data-type="NodeBlockquote"][fold="1"]{
+     margin-left : 0 !important;
+     margin-right : 0 !important;
+}
+/* 调整折叠时 引述块下列表及段落样式 */
+.protyle-wysiwyg [data-type="NodeBlockquote"][fold="1"] .protyle-action{
+    display: none;
+}
+.protyle-wysiwyg [data-type="NodeBlockquote"][fold="1"]  div{
+     margin-left: 0 !important;
+     margin-right: 0 !important;
+     margin: 0 !important;
+     padding:0 !important;
+     border:none;
+}
+
+/*大纲折叠时圆点添加背景色*/
+.protyle-wysiwyg [data-node-id][fold="1"].li>.protyle-action svg{
+    border-radius: 20px;
+    background-color: var(--b3-list-hover);    
+}
+.protyle-wysiwyg [data-node-id][fold="1"].list:first-child .protyle-action svg{
+    background-color: var(--b3-list-hover);
+    border-radius: 20px;    
+}
+.protyle-wysiwyg [data-node-id][fold="1"].list .protyle-action svg{
+    background-color: var(--b3-list-hover);
+    border-radius: 20px;   
+}
+
+/* 消除折叠时圆点边框对待办事项的影响 */
+.protyle-wysiwyg [data-node-id][fold="1"].li>.protyle-action--task svg{
+    border: 2px solid var(--b3-theme-background) !important;
+    border-radius: 0;
+}
+.protyle-wysiwyg [data-node-id][fold="1"].list .protyle-action--task svg{
+    border: 2px solid var(--b3-theme-background) !important;
+    border-radius: 0;
+}
+
+
+
+/****************** 三、文档排版 ***************************************/
+
+/* 通用设置 */
+.protyle-wysiwyg{
+    #padding-top: 54px !important; /*增大上边距为了避免面包屑2行时遮挡文档第一行文字*/
+}
+
+.b3-typography ,.protyle-wysiwyg [data-node-id] [contenteditable="true"]{
+    line-height: var(--allen-line-height);/* 行高 */
+    letter-spacing: 0px; /* 字间距 */
+    word-spacing: 0px; /* 词间距 */
+    text-align:left;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+/* 段落 p */
+.b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id]{
+    margin: 0;
+    line-height: var(--allen-line-height);/* 行高 */
+}
+
+/*标题 h*/
+.b3-typography .h1,.b3-typography h1,.b3-typography .h2,.b3-typography h2,.b3-typography .h3,.b3-typography h3,.b3-typography .h4,.b3-typography h4,.b3-typography .h5,.b3-typography h5,.b3-typography .h6,.b3-typography h6,.protyle-wysiwyg .h1,.protyle-wysiwyg h1,.protyle-wysiwyg .h2,.protyle-wysiwyg h2,.protyle-wysiwyg .h3,.protyle-wysiwyg h3,.protyle-wysiwyg .h4,.protyle-wysiwyg h4,.protyle-wysiwyg .h5,.protyle-wysiwyg h5,.protyle-wysiwyg .h6,.protyle-wysiwyg h6 {
+
+}
+
+.b3-typography .h1, .b3-typography h1, .protyle-wysiwyg .h1, .protyle-wysiwyg h1{
+    margin: 14px 0 8px 0;
+    padding: 0.2em 4px;
+    font-size: 1.8em;
+}
+
+.b3-typography .h2, .b3-typography h2, .protyle-wysiwyg .h2, .protyle-wysiwyg h2{
+    margin: 14px 0 0 0;
+    padding: 0.2em 4px;
+    #font-size: 1.8em;
+    border:none;
+}
+.b3-typography .h3, .b3-typography h3, .protyle-wysiwyg .h3, .protyle-wysiwyg h3{
+    margin: 12px 0 0 0;
+    #font-size: 1.6em;
+}
+.b3-typography .h4, .b3-typography h4, .protyle-wysiwyg .h4, .protyle-wysiwyg h4{
+    margin: 6px 0 0 0;
+    #font-size: 1.4em;
+}
+.b3-typography .h5, .b3-typography h5, .protyle-wysiwyg .h5, .protyle-wysiwyg h5{
+    #margin: 6px 0 0 0;
+    #font-size: 1.2em;
+}
+.b3-typography .h6, .b3-typography h6, .protyle-wysiwyg .h6, .protyle-wysiwyg h6{
+    #margin: 6px 0 0 0;
+    #font-size: 1em;
+}
+
+/* 大纲、列表 */
+.b3-typography ul,.b3-typography ol ,.protyle-wysiwyg [data-node-id].list{
+    margin:0px;
+}
+/*列表项*/
+.b3-typography li,.protyle-wysiwyg [data-node-id].li{
+    margin: 0;
+}
+.b3-typography li{
+    #margin-bottom: 8px;
+}
+
+/* 表格 */
+.b3-typography table tr:hover, .protyle-wysiwyg table tr:hover{
+    background-color: var(--b3-theme-surface) !important;
+}
+/*偶数行*/
+.b3-typography table tbody tr:nth-child(2n+1),.protyle-wysiwyg table tbody tr:nth-child(2n+1) {
+    background:var(--b3-theme-background);
+}
+
+/* 图片 */
+.b3-typography img, .protyle-wysiwyg img{
+    border-radius: 0px;
+}
+
+/* 实验功能：在标题下方通过圆点来显示标题层级 */
+/************ 显示标题层级 代码开始 **************
+.protyle-wysiwyg .h1:before,.protyle-wysiwyg .h2:before,.protyle-wysiwyg .h3:before,.protyle-wysiwyg .h4:before,.protyle-wysiwyg .h5:before{
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--b3-scroll-color);
+    position: absolute;
+    bottom: -0.35em;
+    left: 0.2em;
+}
+.protyle-wysiwyg .h1:before{
+    #content: "·";
+}
+.protyle-wysiwyg .h2:before{
+    content: "··";
+}
+.protyle-wysiwyg .h3:before{
+    content: "···";
+}
+.protyle-wysiwyg .h4:before{
+    content: "····";
+}
+.protyle-wysiwyg .h5:before{
+    content: "·····";
+}
+/************ 显示标题层级 代码结束 **************/
+
+
+
+/************************* 其他 **********************************************/
+/***** 弹框动效 *****/
+.b3-dialog--open .b3-dialog__container{
+    transform:translate(-50%,-50%); animation: dialogOpen 0.3s ease-in-out forwards;
+}
+
+@keyframes dialogOpen {
+    0% {
+        -webkit-transform: matrix3d(.7, 0, 0, 0, 0, .7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.7, 0, 0, 0, 0, .7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        opacity: 0
+    }
+    3.4% {
+        -webkit-transform: matrix3d(.795, 0, 0, 0, 0, .822, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.795, 0, 0, 0, 0, .822, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    4.7% {
+        -webkit-transform: matrix3d(.835, 0, 0, 0, 0, .88, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.835, 0, 0, 0, 0, .88, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    6.81% {
+        -webkit-transform: matrix3d(.898, 0, 0, 0, 0, .968, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.898, 0, 0, 0, 0, .968, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    9.41% {
+        -webkit-transform: matrix3d(.965, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.965, 0, 0, 0, 0, 1.05, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    10.21% {
+        -webkit-transform: matrix3d(.982, 0, 0, 0, 0, 1.068, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.982, 0, 0, 0, 0, 1.068, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    13.61% {
+        -webkit-transform: matrix3d(1.037, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.037, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    14.11% {
+        -webkit-transform: matrix3d(1.042, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.042, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    17.52% {
+        -webkit-transform: matrix3d(1.062, 0, 0, 0, 0, 1.072, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.062, 0, 0, 0, 0, 1.072, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    18.72% {
+        -webkit-transform: matrix3d(1.064, 0, 0, 0, 0, 1.056, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.064, 0, 0, 0, 0, 1.056, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    21.32% {
+        -webkit-transform: matrix3d(1.059, 0, 0, 0, 0, 1.021, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.059, 0, 0, 0, 0, 1.021, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    24.32% {
+        -webkit-transform: matrix3d(1.045, 0, 0, 0, 0, .988, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.045, 0, 0, 0, 0, .988, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    25.23% {
+        -webkit-transform: matrix3d(1.04, 0, 0, 0, 0, .981, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.04, 0, 0, 0, 0, .981, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    29.03% {
+        -webkit-transform: matrix3d(1.019, 0, 0, 0, 0, .969, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.019, 0, 0, 0, 0, .969, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    29.93% {
+        -webkit-transform: matrix3d(1.014, 0, 0, 0, 0, .97, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.014, 0, 0, 0, 0, .97, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    35.54% {
+        -webkit-transform: matrix3d(.994, 0, 0, 0, 0, .989, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.994, 0, 0, 0, 0, .989, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    36.74% {
+        -webkit-transform: matrix3d(.991, 0, 0, 0, 0, .994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.991, 0, 0, 0, 0, .994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    41.04% {
+        -webkit-transform: matrix3d(.988, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.988, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    44.44% {
+        -webkit-transform: matrix3d(.99, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.99, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    52.15% {
+        -webkit-transform: matrix3d(.997, 0, 0, 0, 0, 1.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(.997, 0, 0, 0, 0, 1.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        opacity: 1
+    }
+    59.86% {
+        -webkit-transform: matrix3d(1.002, 0, 0, 0, 0, .997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.002, 0, 0, 0, 0, .997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    63.26% {
+        -webkit-transform: matrix3d(1.002, 0, 0, 0, 0, .998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.002, 0, 0, 0, 0, .998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    75.28% {
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    85.49%,
+    90.69%,
+    100% {
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+/* 滚动条样式 */
 ::-webkit-scrollbar {
     width : 8px;  /* 滚动条宽度 */
     overflow-y: hidden;
