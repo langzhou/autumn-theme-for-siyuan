@@ -312,6 +312,13 @@ span.counter:not(.popover__block){
 .layout-tab-bar .item__text{
     padding: 0 2px;
 }
+/* 默认隐藏页签关闭按钮，悬浮时展现 */
+.layout-tab-bar .item__close{
+    visibility: hidden;
+}
+.layout-tab-bar .item:hover .item__close{
+    visibility: visible;
+}
 
 /***** 面包屑 *****/
 .protyle-breadcrumb{
@@ -359,7 +366,7 @@ span.counter:not(.popover__block){
 /* 光标选中文本样式 */
 .protyle-wysiwyg ::selection{ 
     background-color:var(--b3-theme-primary-lightest);
-    #color: var(--b3-theme-on-primary);
+    /* color: var(--b3-theme-on-primary); */
 }
 
 /* 实验功能：鼠标划选区域*/
@@ -470,7 +477,7 @@ span.counter:not(.popover__block){
 }
 
 
-/********文档预览模式 ********/
+/******** 文档预览模式 ********/
 /*预览工具栏*/
 .protyle-preview__action{
      background-color: var(--b3-theme-background);
@@ -530,9 +537,10 @@ strong[style]{
     font-size: 85%;
 }
 
-
-
-
+/* 数学公式 */
+.b3-typography [data-subtype="math"], .protyle-wysiwyg [data-subtype="math"]{
+    font-size: 100%;
+}
 
 /* 块折叠状态 */
 .protyle-wysiwyg [data-node-id][fold="1"]{
@@ -562,8 +570,8 @@ strong[style]{
 
 /* 调整折叠时 引述块样式 */
 .protyle-wysiwyg [data-type="NodeBlockquote"][fold="1"]{
-     margin-left : 0 !important;
-     margin-right : 0 !important;
+     margin-left: 0 !important;
+     margin-right: 0 !important;
 }
 /* 调整折叠时 引述块下列表及段落样式 */
 .protyle-wysiwyg [data-type="NodeBlockquote"][fold="1"] .protyle-action{
@@ -630,9 +638,9 @@ strong[style]{
     line-height: var(--allen-line-height);/* 行高 */
     letter-spacing: 0px; /* 字间距 */
     word-spacing: 0px; /* 词间距 */
-    text-align:left;
+    text-align: left;
     word-break: normal;
-    word-wrap: break-word;
+    word-wrap:  break-word;
 }
 
 /*** 超级块 ***/
@@ -791,7 +799,6 @@ strong[style]{
 .b3-dialog--open .b3-dialog__container{
     transform:translate(-50%,-50%); animation: dialogOpen 0.3s ease-in-out forwards;
 }
-
 @keyframes dialogOpen {
     0% {
         -webkit-transform: matrix3d(.7, 0, 0, 0, 0, .7, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
