@@ -53,6 +53,12 @@
     --b3-card-success-color: rgb(30, 70, 32);
     --b3-card-success-background: rgb(237, 247, 237);
 
+    /* 调整在 Autumn 黄色主题上的卡片颜色 */
+    --b3-card-error-background:rgb(247 216 213);
+    --b3-card-warning-background: rgb(247 231 208);
+    --b3-card-info-background: rgb(200 227 247);
+    --b3-card-success-background: rgb(204 236 204);
+
     /* 自定义文字 */
     --b3-font-color1: var(--b3-card-error-color);
     --b3-font-color2: var(--b3-card-warning-color);
@@ -126,7 +132,7 @@
     --b3-protyle-code-background: rgba(27, 31, 35, .05);
 
     /* 所见即所得行内元素颜色 */
-    --b3-protyle-inline-strong-color: var(--b3-theme-on-background); /* 粗体 */
+    --b3-protyle-inline-strong-color: inherit; /* 粗体 */
     --b3-protyle-inline-em-color:  var(--b3-theme-on-background); /* 斜体 */
     --b3-protyle-inline-s-color: var(--b3-theme-on-background); /* 删除线 */
     --b3-protyle-inline-link-color: var(--b3-theme-primary); /* 超级链接 */
@@ -169,7 +175,7 @@
 
 
 /* 说明：支持在全屏模式下自动隐藏顶栏，鼠标悬浮时展现。请将 min-height和 min-width 设置为自己电脑屏幕分辨率，如果不需要此功能请注释代码 */
-/******* 隐藏toolbar 代码开始 *********/
+/******* 隐藏toolbar 代码开始 *********
 @media only screen and (min-height: 900px) and (min-width: 1400px)
 {
     .toolbar{
@@ -297,6 +303,9 @@ span.counter:not(.popover__block){
     border-radius: 2px;
 }
 
+.b3-text-filed[readonly]{
+    border: none;
+}
 /******** 文档编辑区 **********/
 
 /*** 页签栏 ****/
@@ -443,10 +452,12 @@ span.counter:not(.popover__block){
     width:12px;
     height:12px;
     margin:8px 0px 0px 1px;
-    color: var(--b3-tooltips-color);
     border: 2px solid transparent;
 }
-
+/* 设置彩色卡片内的原点颜色 */
+.protyle-wysiwyg [data-node-id][style] .protyle-action {
+    color:inherit !important;
+}
 /* 圆点悬浮时样式 */
 .protyle-wysiwyg [data-node-id].li>.protyle-action:hover svg{
     border-radius: 20px;
@@ -511,6 +522,7 @@ strong[style]{
 .protyle-wysiwyg u, .b3-typography u{
     text-decoration: none;
     border-bottom: 1px solid var(--b3-theme-on-background);
+    border-color: inherit;
 }
 
 
@@ -554,6 +566,10 @@ strong[style]{
 /* 块折叠状态 */
 .protyle-wysiwyg [data-node-id][fold="1"]{
      height: var(--allen-line-height);
+}
+/* 移除官方设定的padding-top */
+.protyle-wysiwyg [data-node-id][fold="1"] [data-node-id]{
+    padding-top: var(--allen-padding-top-bottom);
 }
 
 /*** 实验功能：调整段落块折叠时的样式 *****/
@@ -662,6 +678,16 @@ strong[style]{
     margin:4px;
 }
 /****** 实验功能结束 */
+
+/* 实验功能：颜色卡片增加padding */
+.sb div[data-node-id][style]{
+    padding: 8px 10px;
+}
+/* 嵌套内的颜色卡片恢复正常padding */
+.sb div[data-node-id][style] div[data-node-id][style] {
+    padding: var(--allen-block-padding);
+}
+/**** 实验功能结束 ***/
 
 /* 段落 p */
 .b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id]{
